@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nama: MyString
+  jenis: MyString
+  stock: 1
+
+two:
+  nama: MyString
+  jenis: MyString
+  stock: 1
