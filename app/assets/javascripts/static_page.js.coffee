@@ -6,5 +6,8 @@
       interval: 4000
     prev= ->
       $('.carousel').carousel('prev')
+      return 1
     next= ->
       $('.carousel').carousel('next')
+      return 1
+    return 0
