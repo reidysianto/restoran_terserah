@@ -1,13 +1,11 @@
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+
+<nav class="navbar navbar-default" id="futpad" style="margin-top:20px"role="navigation" >
   <div class="container">
     <div class="row ">
       <div class="col-md-2 "></div>
       <div class="col-md-8 ">
         <ul class="nav nav-pills nav-justified foot">
-          <li class="active"><%link_to 'Home', root_path%></li>
-          <li><%link_to 'Gallery', gallery_path%></li>
-          <li><%link_to 'About', about_path%></li>
-          <li><%link_to 'Contact Us', contact_path%></li>
+         <%= render 'shared/nav'%>
         </ul>
       </div>
       <div class="col-md-2 "></div>

@@ -1,4 +1,5 @@
-RestoranTerserah::Application.routes.draw do  \
+RestoranTerserah::Application.routes.draw do  
+  resources :users
   root to:"static_page#index"
   match '/gallery', to: 'static_page#gallery'
   match '/about', to: 'static_page#about'

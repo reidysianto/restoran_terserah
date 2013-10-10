@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
-
+gem 'bcrypt-ruby', '3.0.1'
 gem 'anjlab-bootstrap-rails', 
 :require => 'bootstrap-rails',
 :github => 'anjlab/bootstrap-rails'
@@ -11,6 +11,7 @@ gem 'lorem-ipsum-me'
 gem 'mysql2'
 group :development do
   gem 'better_errors'
+  gem "binding_of_caller"
 end
 # Gems used only for assets and not required
 # in production environments by default.

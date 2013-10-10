@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/anjlab/bootstrap-rails.git
-  revision: 24e9ee8edfb0b810fb2ba4f33169773b49c6fb83
+  revision: 1ac49dfb04f817b7d5368c82889c66c88533dcdc
   specs:
     anjlab-bootstrap-rails (3.0.0.3)
       railties (>= 3.0)
@@ -37,9 +37,12 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.2)
+    bcrypt-ruby (3.0.1)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.0.4)
     coderay (1.1.0)
     coffee-rails (3.2.2)
@@ -49,6 +52,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
@@ -116,7 +120,9 @@ PLATFORMS
 
 DEPENDENCIES
   anjlab-bootstrap-rails!
+  bcrypt-ruby (= 3.0.1)
   better_errors
+  binding_of_caller
   coffee-rails (~> 3.2.1)
   jquery-rails
   lorem-ipsum-me
