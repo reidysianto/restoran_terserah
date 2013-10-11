@@ -1,0 +1,37 @@
+<div class='container'>
+  <div class="row">
+    <h1>Gallery</h1>
+    <%= Faker::Lorem.paragraph(30) %>
+  </div>
+</div>
+<hr></hr>
+<%if signed_in?%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-2">
+      <h3>Upload image form</h3>
+      <%= form_for @gallery,url: upload_path, html: { :multipart => true } do |f| %>
+      <%= render 'shared/error_messages', object: f.object%>
+      <div class="form-group">
+        <%=f.label :name, "title of gallery"%>
+        <%= f.text_field :name, class:"form-control"%>
+      </div>
+      <div class="form-group">
+        <%=f.label :image, "Image "%>
+        <%= f.file_field :image %>  
+      </div>
+        <%= f.submit "Submit", class: "btn btn-default" %>
+      
+    <% end %>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      <% unless @last_image.nil?%>
+      <h3>Last uploaded image</h3>
+      <%= image_tag @last_image.image.url(),class: "img-thumbnail" %>
+      <p><%=@last_image.name%></p>
+
+      <%end%>
+    </div>
+  </div>
+</div>
+<%end%>
