@@ -1,9 +1,42 @@
 RestoranTerserah::Application.routes.draw do  
-  resources :users
+  resources :users, only: [:create, :new]
+  resources :galleries, only: [:create, :index]
   root to:"static_page#index"
-  match '/gallery', to: 'static_page#gallery'
+  match '/upload', to: 'galleries#create'
   match '/about', to: 'static_page#about'
   match '/contact', to: 'static_page#contact'
+  match '/signout', to: 'static_page#destroy', via: :delete
+  resources :static_page, only: [:create, :destroy]
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

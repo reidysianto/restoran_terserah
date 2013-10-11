@@ -1,16 +1,20 @@
 <div class="container">
-  <%= render 'carousel'%>
+  <div class='row'>
+    <div class="col-md-8 col-md-offset-2">
+      <%= render 'carousel'%>
+    </div>
+  </div>
 </div>
 <hr></hr>
-<div class="container subcontent">
+<div class="container">
   <div class="row">
-    <% 3.times do %>
-      <%= render 'subcontent' %>
+    <% (1..3).each do |x|%>
+      <%= render 'subcontent',x:x %>
     <%end%>
   </div>
 </div>
 <hr></hr>
-<div class="container blog">
+<div class="container ">
   <%= render 'blog'%>
 </div>
 

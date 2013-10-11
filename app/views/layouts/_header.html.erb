@@ -1,3 +1,4 @@
+<header>
 <nav class="navbar-wrapper navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -9,14 +10,23 @@
       <div class="collapse navbar-collapse lyphicon glyphicon-align-justify">
         <ul class="nav navbar-nav">
           <%= render 'shared/nav'%>
-          <li>
-            <%= link_to new_user_path, :class => "nav" do %>
+          <%if signed_in?%>
+            <li>  
+              <%= link_to static_page_path(current_user),method: "delete", :class => "navs" do %>
+              <span class="glyphicon glyphicon-log-out"></span> Sign Out
+              <% end %>
+            </li>
+          <%else%>
+            <li>
+            <%= link_to new_user_path, :class => "navs" do %>
               <span class="glyphicon glyphicon-star"></span> Sign Up
             <% end %>
           </li>
-          <%= render 'shared/signin'%>
+            <%= render 'shared/signin'%>
+          <%end%>
         </ul>
       </div>
     </div>  
   </div>
 </nav>
+</header>

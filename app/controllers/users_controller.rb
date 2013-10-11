@@ -5,7 +5,9 @@ class UsersController < ApplicationController
   def create
     @user=User.new(params[:user])
     if @user.save
-      redirect_to gallery_path
+      sign_in @user
+      flash[:success] = "Member created!"
+      redirect_to root_path
     else
       render 'new'
     end

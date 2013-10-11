@@ -7,8 +7,9 @@ gem 'anjlab-bootstrap-rails',
 :github => 'anjlab/bootstrap-rails'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'lorem-ipsum-me'
+gem 'faker'
 gem 'mysql2'
+gem "paperclip", "~> 3.0"
 group :development do
   gem 'better_errors'
   gem "binding_of_caller"
