@@ -1,8 +1,9 @@
 RestoranTerserah::Application.routes.draw do  
-  resources :users, only: [:create, :new]
-  resources :galleries, only: [:create, :index]
+  resources :users, only: [:create]
+  resources :galleries, only: [:new,:create, :index]
   root to:"static_page#index"
-  match '/upload', to: 'galleries#create'
+  match '/s1gn1n2', to: 'static_page#signin'
+  match '/r3giss1', to: 'users#new'
   match '/about', to: 'static_page#about'
   match '/contact', to: 'static_page#contact'
   match '/signout', to: 'static_page#destroy', via: :delete

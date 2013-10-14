@@ -19,15 +19,13 @@
               <span class="glyphicon glyphicon-log-out"></span> Sign Out
               <% end %>
             </li>
-          <%else%>
-            <li>
-            <%= link_to new_user_path, :class => "navs" do %>
-              <span class="glyphicon glyphicon-star"></span> Sign Up
-            <% end %>
-          </li>
-            <%= render 'shared/signin'%>
           <%end%>
         </ul>
+        <% if signed_in?%>
+        <ul class="nav navbar-nav navbar-right">
+          <li ><p class="navbar-text pull-right">Welcome, <%=current_user.name.capitalize%></p></li>
+        </ul>
+        <%end%>
       </div>
     </div>  
   </div>
